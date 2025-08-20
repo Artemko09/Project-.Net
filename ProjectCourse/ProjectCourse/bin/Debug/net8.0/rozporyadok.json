@@ -1,0 +1,35 @@
+{
+  "Data": "2025-08-19T00:00:00",
+  "DiyList": [
+    {
+      "Nazva": "Walk",
+      "ChasPochatku": "09:00:00",
+      "Tryvalist": "00:30:00"
+    },
+    {
+      "Nazva": "Work",
+      "ChasPochatku": "10:00:00",
+      "Tryvalist": "02:00:00"
+    },
+    {
+      "Nazva": "Lunch",
+      "ChasPochatku": "12:30:00",
+      "Tryvalist": "00:30:00"
+    },
+    {
+      "Nazva": "Walk",
+      "ChasPochatku": "14:00:00",
+      "Tryvalist": "01:00:00"
+    },
+    {
+      "Nazva": "Walk",
+      "ChasPochatku": "17:00:00",
+      "Tryvalist": "00:30:00"
+    },
+    {
+      "Nazva": "Dinner",
+      "ChasPochatku": "19:00:00",
+      "Tryvalist": "00:30:00"
+    }
+  ]
+}

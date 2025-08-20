@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RozporyadokDnya xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Data>2025-08-19T00:00:00</Data>
+  <DiyList>
+    <Diya>
+      <Nazva>Walk</Nazva>
+      <ChasPochatku>PT9H</ChasPochatku>
+      <Tryvalist>PT30M</Tryvalist>
+    </Diya>
+    <Diya>
+      <Nazva>Work</Nazva>
+      <ChasPochatku>PT10H</ChasPochatku>
+      <Tryvalist>PT2H</Tryvalist>
+    </Diya>
+    <Diya>
+      <Nazva>Lunch</Nazva>
+      <ChasPochatku>PT12H30M</ChasPochatku>
+      <Tryvalist>PT30M</Tryvalist>
+    </Diya>
+    <Diya>
+      <Nazva>Walk</Nazva>
+      <ChasPochatku>PT14H</ChasPochatku>
+      <Tryvalist>PT1H</Tryvalist>
+    </Diya>
+    <Diya>
+      <Nazva>Walk</Nazva>
+      <ChasPochatku>PT17H</ChasPochatku>
+      <Tryvalist>PT30M</Tryvalist>
+    </Diya>
+    <Diya>
+      <Nazva>Dinner</Nazva>
+      <ChasPochatku>PT19H</ChasPochatku>
+      <Tryvalist>PT30M</Tryvalist>
+    </Diya>
+  </DiyList>
+</RozporyadokDnya>

@@ -1,0 +1,12 @@
+
+2025-08-20 13:11:25,498 [1] ERROR Project_course.Services.LoggerService - Виникла помилка
+System.IO.FileNotFoundException: Could not find file 'C:\Users\ANNA\Desktop\MyProject\ProjectCourse\ProjectCourse\bin\Debug\net8.0\rozporyadok.txt'.
+File name: 'C:\Users\ANNA\Desktop\MyProject\ProjectCourse\ProjectCourse\bin\Debug\net8.0\rozporyadok.txt'
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.File.ReadAllLines(String path, Encoding encoding)
+   at Project_course.Services.FileService.LoadFromTxt(String filePath) in C:\Users\ANNA\Desktop\MyProject\ProjectCourse\ProjectCourse\Services\FileService.cs:line 13
+   at Project_course.Program.Main() in C:\Users\ANNA\Desktop\MyProject\ProjectCourse\ProjectCourse\Program.cs:line 13
