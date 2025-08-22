@@ -14,11 +14,10 @@ namespace Project_course.Services
         {
             try
             {
-                // Шлях до конфігураційного файлу log4net
                 var configFile = new FileInfo("log4net.config");
                 if (!configFile.Exists)
                 {
-                    Console.WriteLine("Не знайдено log4net.config! Логи не будуть записані.");
+                    Console.WriteLine("ГЌГҐ Г§Г­Г Г©Г¤ГҐГ­Г® log4net.config! Г‹Г®ГЈГЁ Г­ГҐ ГЎГіГ¤ГіГІГј Г§Г ГЇГЁГ±Г Г­Ві.");
                 }
                 else
                 {
@@ -30,16 +29,16 @@ namespace Project_course.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Помилка ініціалізації логера: " + ex.Message);
+                Console.WriteLine("ГЏГ®Г¬ГЁГ«ГЄГ  ВіГ­ВіГ¶ВіГ Г«ВіГ§Г Г¶ВіВї Г«Г®ГЈГҐГ°Г : " + ex.Message);
             }
         }
 
         public static void Log(Exception ex)
         {
             if (log != null)
-                log.Error("Виникла помилка", ex);
+                log.Error("Г‚ГЁГ­ГЁГЄГ«Г  ГЇГ®Г¬ГЁГ«ГЄГ ", ex);
             else
-                Console.WriteLine("Логер не ініціалізований: " + ex.Message);
+                Console.WriteLine("Г‹Г®ГЈГҐГ° Г­ГҐ ВіГ­ВіГ¶ВіГ Г«ВіГ§Г®ГўГ Г­ГЁГ©: " + ex.Message);
         }
 
         public static void LogMessage(string message)
@@ -47,7 +46,8 @@ namespace Project_course.Services
             if (log != null)
                 log.Info(message);
             else
-                Console.WriteLine("Логер не ініціалізований: " + message);
+                Console.WriteLine("Г‹Г®ГЈГҐГ° Г­ГҐ ВіГ­ВіГ¶ВіГ Г«ВіГ§Г®ГўГ Г­ГЁГ©: " + message);
         }
     }
 }
+
