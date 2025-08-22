@@ -20,21 +20,17 @@ namespace Project_course.Models
         {
             var totalWalk = ZagTryvalistProgulyanok();
 
-            // Якщо вже >= 2 годин, нічого робити не треба
             if (totalWalk.TotalMinutes >= 120)
                 return;
 
-            // Знаходимо перший TV після 12:00
             var tv = DiyList.FirstOrDefault(d =>
                 d.Nazva.ToLower() == "tv" &&
                 d.ChasPochatku >= new TimeSpan(12, 0, 0));
 
             if (tv != null)
             {
-                // Скільки хвилин потрібно додати до 2 годин
                 var neededMinutes = 120 - totalWalk.TotalMinutes;
 
-                // Якщо TV тривалість менше або рівна neededMinutes, змінюємо його на прогулянку
                 if (tv.Tryvalist.TotalMinutes <= neededMinutes)
                 {
                     tv.Nazva = "Walk";
@@ -43,7 +39,6 @@ namespace Project_course.Models
                 }
                 else
                 {
-                    // TV більший за neededMinutes → скорочуємо TV і додаємо прогулянку потрібної тривалості
                     var newWalk = new Diya
                     {
                         Nazva = "Walk",
@@ -54,14 +49,13 @@ namespace Project_course.Models
                     totalWalk += newWalk.Tryvalist;
                 }
             }
-
-            // Якщо все ще не вистачає часу (немає TV або TV замало), додаємо нову прогулянку в кінець дня
+            
             if (totalWalk.TotalMinutes < 120)
             {
                 var newWalk = new Diya
                 {
                     Nazva = "Walk",
-                    ChasPochatku = DiyList.Max(d => d.ChasPochatku + d.Tryvalist), // після останньої дії
+                    ChasPochatku = DiyList.Max(d => d.ChasPochatku + d.Tryvalist), 
                     Tryvalist = TimeSpan.FromMinutes(120 - totalWalk.TotalMinutes)
                 };
                 DiyList.Add(newWalk);
@@ -70,3 +64,4 @@ namespace Project_course.Models
 
     }
 }
+
